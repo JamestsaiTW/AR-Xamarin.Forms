@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/AR.XFSample/AR.XFSample/obj
+/AR.XFSample/AR.XFSample.Android/obj
+/AR.XFSample/AR.XFSample.iOS/obj
