@@ -1,14 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:AR.XFSample"
-             x:Class="AR.XFSample.MainPage">
+<ContentPage
+    x:Class="AR.XFSample.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <!--  Place new controls here  -->
+        <Label
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!"
+            VerticalOptions="CenterAndExpand" />
+        <Button
+            Clicked="ArStartButton_Clicked"
+            HorizontalOptions="CenterAndExpand"
+            Text="AR Start!" />
     </StackLayout>
 
 </ContentPage>

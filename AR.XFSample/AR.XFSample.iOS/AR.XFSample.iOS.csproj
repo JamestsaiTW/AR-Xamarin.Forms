@@ -90,11 +90,14 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DependencyServices\ArDependencyService.cs" />
+    <Compile Include="Helpers\ArViewControllerHelper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <SceneKitAsset Include="Resources\art.scnassets\ship.dae" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -156,5 +159,8 @@
       <Project>{8C5EDF27-CAE2-4638-B7C3-8F90C425B57A}</Project>
       <Name>AR.XFSample</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SceneKitAsset Include="Resources\art.scnassets\texture.png" />
   </ItemGroup>
 </Project>

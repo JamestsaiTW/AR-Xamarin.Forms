@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AR.XFSample.DependencyServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,11 @@ namespace AR.XFSample
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void ArStartButton_Clicked(object sender, EventArgs e)
+        {
+            DependencyService.Get<IArDependencyService>().LaunchAR();
         }
     }
 }
