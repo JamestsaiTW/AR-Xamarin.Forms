@@ -15,9 +15,10 @@ namespace AR.XFSample
             InitializeComponent();
         }
 
-        private void ArStartButton_Clicked(object sender, EventArgs e)
+        private async void ArStartButton_Clicked(object sender, EventArgs e)
         {
-            DependencyService.Get<IArDependencyService>().LaunchAR();
+            var arLaunchType =  await DisplayActionSheet("Start AR", "Cancel", "You can back to this View, when your iOS Device is Portrait!", new []{ "At One Point", "Normal Fly", "Cycle Fly", "Rotate Fly", "Crash Fly" });
+            DependencyService.Get<IArDependencyService>().LaunchAR(arLaunchType);
         }
     }
 }

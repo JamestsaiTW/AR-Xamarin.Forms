@@ -4,7 +4,8 @@ using System.Text;
 
 namespace AR.XFSample.DependencyServices
 {
-    interface IArDependencyService
+    public interface IArDependencyService
     {
+        void LaunchAR(string arLaunchType = "");
     }
 }

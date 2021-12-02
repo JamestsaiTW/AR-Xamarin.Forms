@@ -13,10 +13,10 @@ namespace AR.XFSample.iOS.DependencyServices
 {
     public class ArDependencyService : IArDependencyService
     {
-        public void LaunchAR()
+        public void LaunchAR(string arLaunchType = "")
         {
-            ArViewControllerHelper aRviewControllerHelper = new ArViewControllerHelper();
-            UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(aRviewControllerHelper, true, null);
+            ArViewControllerHelper arViewControllerHelper = new ArViewControllerHelper(arLaunchType);
+            UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(arViewControllerHelper, true, null);
         }
     }
 }

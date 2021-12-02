@@ -9,13 +9,16 @@
     <StackLayout>
         <!--  Place new controls here  -->
         <Label
+            FontSize="Large"
             HorizontalOptions="Center"
-            Text="Welcome to Xamarin.Forms!"
+            HorizontalTextAlignment="Center"
+            Text="Welcome to Xamarin.Forms with Augmented Reality (AR)!"
             VerticalOptions="CenterAndExpand" />
         <Button
+            BackgroundColor="BlanchedAlmond"
             Clicked="ArStartButton_Clicked"
-            HorizontalOptions="CenterAndExpand"
-            Text="AR Start!" />
+            HorizontalOptions="FillAndExpand"
+            Text="Augmented Reality (AR) - Go Start!" />
     </StackLayout>
 
 </ContentPage>
