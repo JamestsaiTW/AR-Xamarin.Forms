@@ -17,8 +17,13 @@ namespace AR.XFSample
 
         private async void ArStartButton_Clicked(object sender, EventArgs e)
         {
-            var arLaunchType =  await DisplayActionSheet("Start AR", "Cancel", "You can back to this View, when your iOS Device is Portrait!", new []{ "At One Point", "Normal Fly", "Cycle Fly", "Rotate Fly", "Crash Fly" });
-            DependencyService.Get<IArDependencyService>().LaunchAR(arLaunchType);
+            var actions = Device.Android == Device.RuntimePlatform
+                ? new[] { "Go" }
+                : new[] { "At One Point", "Normal Fly", "Cycle Fly", "Rotate Fly", "Crash Fly" };
+            string arLaunchType = await DisplayActionSheet("Start AR", "Cancel", $"You can back to this View, when your {Device.RuntimePlatform} Device is Portrait!", actions);
+            
+            if(arLaunchType != "Cancel")
+                DependencyService.Get<IArDependencyService>().LaunchAR(arLaunchType);
         }
     }
 }
